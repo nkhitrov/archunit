@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "archunit"
+dynamic = ["version"]
+description = "Architecture rules for Python projects, inspired by Java ArchUnit"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{ name = "Nick Khitrov", email = "khitrov34@gmail.com" }]
+dependencies = []
+
+[project.scripts]
+archunit = "archunit.cli:main"
+
+[tool.hatch.version]
+path = "src/archunit/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/archunit"]
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

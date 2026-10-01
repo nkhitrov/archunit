@@ -1,0 +1,3 @@
+[tool.archunit]
+root_packages = ["proj"]
+source_roots = ["src"]

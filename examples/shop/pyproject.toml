@@ -1,0 +1,8 @@
+[project]
+name = "shop"
+version = "0"
+
+[tool.archunit]
+root_packages = ["shop", "libs"]
+source_roots = ["src"]
+rules_dir = "arch"
